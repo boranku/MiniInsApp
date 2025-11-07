@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: app
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/MyApp
+    username: ${DB_USERNAME:}
+    password: ${DB_PASSWORD:}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# Token expiration time
+app:
+  token:
+    expiration-hours: 24
