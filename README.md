@@ -2,7 +2,7 @@
 
 A Spring Boot-based social media backend API with authentication, post management, comments, likes, and user management features.
 
-## 🚀 Technologies Used
+## Technologies Used
 
 - **Java 21**
 - **Spring Boot 3+**
@@ -11,7 +11,7 @@ A Spring Boot-based social media backend API with authentication, post managemen
 - **Lombok**
 - **JPA/Hibernate**
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Project Initialisation
 
@@ -44,7 +44,7 @@ Create a PostgreSQL database named `MyApp` (or any name you prefer).
 Go to Settings->Compiler->Annotation Processors and click on Enable annotation processing.
 Add environment variables "DB_USERNAME" and "DB_PASSWORD" and set it up according to your database credentials.
 Paste the following content to your `src/main/resources/application.yaml` file:
----
+```
 spring:
   application:
     name: app // your app name
@@ -67,21 +67,21 @@ spring:
 app:
   token:
     expiration-hours: 24
----
+```
 
 If lombok does not work: // we need to provide the lombok version manually
   Open your pom.xml file
   Add the following code in your dependencies:
-  ---
+  ```
   <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
     <version>your_version</version> //change your_version to your lombok version. //added line
     <scope>provided</scope>         //added line
 </dependency>
----
+```
 Add the following code in your annotation proccessors paths:
----
+```
                 <annotationProcessorPaths>
                     <path>
                         <groupId>org.projectlombok</groupId>
@@ -89,7 +89,7 @@ Add the following code in your annotation proccessors paths:
                         <version>your_version</version> //change your_version to your lombok version. //added line
                     </path>
                 </annotationProcessorPaths>
----
+```
 
 Click on reload maven project from the Maven tab.
 
