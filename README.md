@@ -104,6 +104,8 @@ When the application starts for the first time, an admin user is automatically c
 Open Postman
 Import the "MiniIns API.postman_collection.json" file located in the docs folder.
 Test the endpoints according to the flow: signup → login → token related proccesses → logout.
+Enter your server location to {{baseUrl}} environment variable.
+Other variables will be saved automatically while testing.
 
 
 ## Assumptions and Constraints
